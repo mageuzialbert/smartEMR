@@ -71,3 +71,4 @@ scripts/guide-tools/node_modules
 
 # Deployment data artifacts — transfer via scp, never commit
 deploy/
+!docker/development-easy/.env.vps.example
