@@ -102,7 +102,7 @@ jobs:
 
     - name: Upload JUnit test results to GitHub
       if: ${{ !cancelled() }}
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: junit-isolated-tests-php-${{ matrix.php-version }}
         path: junit.xml
@@ -116,7 +116,7 @@ jobs:
 
     - name: Upload clover coverage report to GitHub
       if: ${{ steps.check-files.outputs.clover_exists == 'true' && !cancelled() }}
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-clover-isolated-tests-php-${{ matrix.php-version }}
         path: |
@@ -124,7 +124,7 @@ jobs:
 
     - name: Upload html coverage report to GitHub
       if: ${{ steps.check-files.outputs.htmlcov_exists == 'true' && !cancelled() }}
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-html-isolated-tests-php-${{ matrix.php-version }}
         path: |
