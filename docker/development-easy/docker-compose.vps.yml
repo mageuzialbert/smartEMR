@@ -1,0 +1,42 @@
+# VPS overlay for the temporary remote pilot.
+# NOT auto-loaded — apply it explicitly, AFTER the override:
+#
+#   docker compose \
+#     -f docker-compose.yml \
+#     -f docker-compose.override.yml \
+#     -f docker-compose.vps.yml \
+#     up -d openemr        # openemr depends only on mysql, so this starts just those two
+#                          # (selenium/couchdb/openldap stay down). Add `mailpit phpmyadmin`
+#                          # to the up line only if you actually want them.
+#
+# Why this file exists:
+#   Docker publishes ports via iptables rules in the DOCKER-USER chain that BYPASS ufw,
+#   so binding to 0.0.0.0 (the stock dev-easy default) would expose OpenEMR, phpMyAdmin
+#   and MariaDB to the public internet even with a firewall "blocking" them. We rebind
+#   every published port to 127.0.0.1 so ONLY CloudPanel's local nginx reverse proxy can
+#   reach them. `!override` REPLACES the stock ports list instead of appending to it
+#   (requires Docker Compose v2.24+).
+
+services:
+  openemr:
+    ports: !override
+      - "127.0.0.1:8300:80"     # CloudPanel reverse-proxies the domain here
+      - "127.0.0.1:9300:443"
+    environment:
+      # OpenEMR sits behind CloudPanel's TLS termination. Tell it the public origin is
+      # HTTPS so generated links, redirects and secure-cookie flags are correct.
+      # Replace clinic.example.com with the real CloudPanel domain before going live.
+      OPENEMR_SETTING_site_addr_oath: "https://clinic.example.com"
+
+  mysql:
+    ports: !override
+      - "127.0.0.1:8320:3306"
+
+  phpmyadmin:
+    ports: !override
+      - "127.0.0.1:8310:80"
+
+  mailpit:
+    ports: !override
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
