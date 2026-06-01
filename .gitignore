@@ -68,3 +68,6 @@ Thumbs.db
 # user-guide build tooling (docx generator)
 scripts/guide-tools/node_modules
 .venv-shots/
+
+# Deployment data artifacts — transfer via scp, never commit
+deploy/
