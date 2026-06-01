@@ -73,7 +73,7 @@ jobs:
       continue-on-error: true
     - name: Upload PHPStan Baseline
       if: steps.phpstan-analyze.outcome == 'failure'
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: phpstan-baseline-php${{ matrix.php-version }}
         path: .phpstan/phpstan-*-baseline.neon
