@@ -1,0 +1,77 @@
+[
+  {
+    "label": "Cashier",
+    "menu_id": "opdcshimg",
+    "children": [
+      {
+        "label": "Cashier Worklist",
+        "menu_id": "opdcsh0",
+        "target": "opdcsh",
+        "url": "/interface/modules/custom_modules/oe-module-opd/public/cashier_checkout.php",
+        "children": [],
+        "requirement": 0
+      },
+      {
+        "label": "Find Patient",
+        "icon": "fa-search",
+        "menu_id": "fin0",
+        "target": "fin",
+        "url": "/interface/main/finder/dynamic_finder.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "demo"]
+      }
+    ],
+    "requirement": 0
+  },
+  {
+    "label": "Financial",
+    "menu_id": "feeimg",
+    "children": [
+      {
+        "label": "Payment",
+        "menu_id": "pay1",
+        "target": "enc",
+        "url": "/interface/patient_file/front_payment.php",
+        "children": [],
+        "requirement": 1,
+        "acl_req": ["acct", "bill", "write"]
+      },
+      {
+        "label": "Checkout",
+        "menu_id": "bil1",
+        "target": "enc",
+        "url": "/interface/patient_file/pos_checkout.php?framed=1",
+        "children": [],
+        "requirement": 1,
+        "acl_req": ["acct", "bill", "write"]
+      },
+      {
+        "label": "Front Receipts",
+        "menu_id": "rep0",
+        "target": "rep",
+        "url": "/interface/reports/front_receipts_report.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["acct", "rep_a"]
+      }
+    ],
+    "requirement": 0
+  },
+  {
+    "label": "File",
+    "menu_id": "filimg",
+    "children": [
+      {
+        "label": "Preferences",
+        "icon": "fa-gears",
+        "menu_id": "prf0",
+        "target": "msc",
+        "url": "/interface/super/edit_globals.php?mode=user",
+        "children": [],
+        "requirement": 0
+      }
+    ],
+    "requirement": 0
+  }
+]

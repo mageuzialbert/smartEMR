@@ -1,0 +1,45 @@
+[
+    {
+        "label": "Dashboard",
+        "menu_id": "dashboard",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/patient_file/summary/demographics.php",
+        "pid": "false",
+        "children": [],
+        "requirement": 0
+    },
+    {
+        "label": "Outstanding Bills",
+        "menu_id": "ledger",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/reports/pat_ledger.php?form=1&patient_id=",
+        "pid": "true",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["acct", "rep"]
+    },
+    {
+        "label": "Take Payment",
+        "menu_id": "frontpay",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/modules/custom_modules/oe-module-opd/public/cashier_collect.php?pid=",
+        "pid": "true",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["acct", "bill", "write"]
+    },
+    {
+        "label": "Checkout",
+        "menu_id": "checkout",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/patient_file/pos_checkout.php?framed=1",
+        "pid": "false",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["acct", "bill", "write"]
+    }
+]

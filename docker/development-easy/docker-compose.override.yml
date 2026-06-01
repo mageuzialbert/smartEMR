@@ -1,0 +1,36 @@
+# Override for the Tanzanian OPD pilot.
+# Auto-loaded by `docker compose` alongside docker-compose.yml.
+# Secrets come from the sibling `.env` file (gitignored).
+# Tanzanian locale settings are baked in via OPENEMR_SETTING_* env vars.
+
+services:
+  mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASS}
+
+  openemr:
+    environment:
+      # Override container defaults with the strong creds from .env
+      MYSQL_ROOT_PASS: ${MYSQL_ROOT_PASS}
+      MYSQL_PASS: ${MYSQL_USER_PASS}
+      OE_PASS: ${OE_ADMIN_PASS}
+
+      # Tanzanian localisation — applied at install time by the
+      # container's auto-installer, persisted to the globals table.
+      OPENEMR_SETTING_gbl_time_zone: Africa/Dar_es_Salaam
+      OPENEMR_SETTING_gbl_currency_label: TZS
+      OPENEMR_SETTING_gbl_currency_symbol: TSh
+      # date_display_format: 0=YYYY-MM-DD, 1=MM/DD/YYYY, 2=DD/MM/YYYY
+      OPENEMR_SETTING_date_display_format: 2
+      # time_display_format: 0=24h, 1=12h  (per library/globals.inc.php)
+      OPENEMR_SETTING_time_display_format: 0
+      OPENEMR_SETTING_phone_country_code: 255
+      # Registration form trimmed for OPD. Insurance section removed and replaced by a
+      # single "Payment Type" field (scripts/seed-payment-type.sql); DEM field visibility
+      # lives in scripts/seed-demographics-layout.sql.
+      OPENEMR_SETTING_simplified_demographics: 1
+      OPENEMR_SETTING_insurance_only_one: 1
+
+      # Quieter dev container for clinic-pilot use
+      XDEBUG_ON: 0
+      XDEBUG_PROFILER_ON: 0

@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Dashboard",
+        "menu_id": "dashboard",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/patient_file/summary/demographics.php",
+        "pid": "false",
+        "children": [],
+        "requirement": 0
+    },
+    {
+        "label": "Start Visit",
+        "menu_id": "opdstartvisit",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/modules/custom_modules/oe-module-opd/public/reception_register.php?pid=",
+        "pid": "true",
+        "children": [],
+        "requirement": 0
+    }
+]

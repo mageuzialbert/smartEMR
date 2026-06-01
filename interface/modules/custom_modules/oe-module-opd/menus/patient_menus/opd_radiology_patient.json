@@ -1,0 +1,23 @@
+[
+    {
+        "label": "Dashboard",
+        "menu_id": "dashboard",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/patient_file/summary/demographics.php",
+        "pid": "false",
+        "children": [],
+        "requirement": 0
+    },
+    {
+        "label": "Patient Results",
+        "menu_id": "radresults",
+        "target": "main",
+        "on_click": "top.restoreSession()",
+        "url": "interface/orders/orders_results.php?pid=",
+        "pid": "true",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "lab"]
+    }
+]

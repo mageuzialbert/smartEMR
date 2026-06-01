@@ -1,0 +1,11 @@
+{
+    "name": "openemr/oe-module-opd",
+    "description": "Tanzanian OPD workflow: clinic routing, payment-gated triage/doctor queues, reception billing.",
+    "type": "openemr-module",
+    "license": "GPL-3.0-only",
+    "autoload": {
+        "psr-4": {
+            "OpenEMR\\Modules\\OpdWorkflow\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,70 @@
+# ─── Project-specific (Tanzanian OPD pilot) ──────────────────────────────────
+
+# Secrets — never commit
+SECRETS.txt
+.env
+.env.*
+!.env.example
+
+# OpenEMR runtime / patient data
+sites/default/documents/
+sites/default/sqlconf.php
+sites/default/edi/
+sites/default/era/
+sites/default/letter_templates/
+
+# Backups
+openemr-backups/
+*.sql
+*.sql.gz
+*.tar.gz
+documents.tar.gz
+
+# Downloaded release artifacts
+openemr-*.tar.gz
+v8_0_0.tar.gz
+
+# Preserved upstream files (kept for reference, not for commit)
+.gitignore.openemr
+OPENEMR_DEV_GUIDE.md
+OPENEMR_README.md
+
+# ─── Upstream OpenEMR patterns (merged from .gitignore shipped in v8_0_0) ────
+
+# logs
+/logs
+*.log
+
+# vendor and built assets
+node_modules
+/vendor/*
+/public/assets/*
+/public/themes/*
+!/public/assets/modified
+/.docs/.out/*
+
+# ccda service build
+ccdaservice/node_modules
+
+# testing
+.phpunit.result.cache
+coverage/js-unit
+
+# phpstan
+tmp-phpstan/*
+
+# dev editor configs
+.DS_Store
+.buildpath
+.project
+.settings
+/.idea/*
+/.vscode/*
+/.vscode-oss/*
+/nbproject/*
+Thumbs.db
+*.swp
+
+# user-guide build tooling (docx generator)
+scripts/guide-tools/node_modules
+.venv-shots/

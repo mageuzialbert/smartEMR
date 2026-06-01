@@ -1,0 +1,230 @@
+constant,definition
+Active,Inatumika
+Add,Ongeza
+Add New,Ongeza Mpya
+Add Patient,Ongeza Mgonjwa
+Address,Anwani
+Address Book,Kitabu cha Anwani
+Administration,Utawala
+Age,Umri
+All,Vyote
+Allergies,Mzio
+Allergy,Mzio
+Amount,Kiasi
+Appointment,Miadi
+Appointments,Miadi
+Assessment,Tathmini
+Authorizations,Idhini
+BMI,BMI (Faharasa ya Uzito-Urefu)
+Back,Rudi
+Balance,Salio
+Batch Communication Tool,Zana ya Mawasiliano ya Kundi
+Billing,Malipo
+Billing Manager,Kidhibiti cha Malipo
+Blood Pressure,Shinikizo la Damu
+Calendar,Kalenda
+Cancel,Ghairi
+Cash,Fedha Taslimu
+Category,Kundi
+Charge,Gharama
+Charges,Gharama
+Check,Hundi
+Checkout,Kamilisha Malipo
+Chief Complaint,Lalamiko Kuu
+Child,Mtoto
+City,Mji
+Clear,Futa
+Clients,Wateja
+Clinical,Kitabibu
+Close,Funga
+Co-Pay,Malipo ya Pamoja
+Collected,Imekusanywa
+Comment,Maoni
+Comments,Maoni
+Completed,Imekamilika
+Continue,Endelea
+Copay,Malipo ya Pamoja
+Country,Nchi
+Create Visit,Anzisha Hudhurio
+Credit Card,Kadi ya Benki
+Date,Tarehe
+Date of Birth,Tarehe ya Kuzaliwa
+Delete,Futa
+Demographics,Taarifa Binafsi
+Description,Maelezo
+Details,Maelezo
+Diagnosis,Utambuzi
+Directions,Maelekezo
+Discount,Punguzo
+Dispensed,Imetolewa
+Documents,Nyaraka
+Dosage,Kipimo cha Dawa
+Dose,Kipimo
+Drug,Dawa
+Drugs,Dawa
+Due,Inadaiwa
+Edit,Hariri
+Email,Barua pepe
+Emergency Contact,Mawasiliano ya Dharura
+Encounter,Mkutano
+Encounters,Mikutano
+Ethnicity,Asili ya Kabila
+Examination,Uchunguzi
+Facility,Kituo
+Fee Sheet,Karatasi ya Ada
+Fees,Ada
+Female,Mwanamke
+Find Patient,Tafuta Mgonjwa
+First Name,Jina la Kwanza
+Flow Board,Ubao wa Mtiririko
+Frequency,Mara ngapi
+From,Kutoka
+Group Number,Namba ya Kundi
+Guardian,Mlezi
+Height,Urefu
+Help,Msaada
+Hide,Ficha
+History,Historia
+Home,Mwanzo
+Home Phone,Simu ya Nyumbani
+Immunization Registry,Daftari la Chanjo
+Inactive,Haitumiki
+Insurance,Bima
+Insurance Company,Kampuni ya Bima
+Inventory,Bohari
+Invoice,Ankara
+Issues,Masuala
+Lab,Maabara
+Lab Documents,Nyaraka za Maabara
+Lab Overview,Muhtasari wa Maabara
+Lab Results,Matokeo ya Maabara
+Language,Lugha
+Last Name,Jina la Ukoo
+List,Orodha
+Loading,Inapakia
+Log In,Ingia
+Log Out,Toka
+Login,Ingia
+Logout,Toka
+Male,Mwanaume
+Marital Status,Hali ya Ndoa
+Medical Problems,Matatizo ya Kiafya
+Medication,Dawa
+Medications,Dawa
+Messages,Ujumbe
+Method,Njia
+Middle Name,Jina la Kati
+Mobile Phone,Simu ya Mkononi
+Name,Jina
+New,Mpya
+New Documents,Nyaraka Mpya
+New Encounter,Mkutano Mpya
+New Patient,Mgonjwa Mpya
+New/Search,Mpya/Tafuta
+Next,Endelea
+No,Hapana
+None,Hakuna
+Note,Dokezo
+Notes,Madokezo
+OK,Sawa
+Occupation,Kazi
+Office Notes,Madokezo ya Ofisi
+Optional,Si lazima
+Order,Agizo
+Order Status,Hali ya Agizo
+Orders,Maagizo
+Other,Nyingine
+Paid,Imelipwa
+Password,Nenosiri
+Patient,Mgonjwa
+Patient Education,Elimu kwa Mgonjwa
+Patient Ledger,Leja ya Mgonjwa
+Patient List Creation,Uundaji wa Orodha ya Wagonjwa
+Patient Reminders,Vikumbusho vya Mgonjwa
+Patient Results,Matokeo ya Mgonjwa
+Patients,Wagonjwa
+Pay,Lipa
+Payment,Malipo
+Payment Method,Njia ya Malipo
+Payments,Malipo
+Pending,Inasubiri
+Pending Review,Inasubiri Mapitio
+Pharmacy,Duka la Dawa
+Phone,Simu
+Plan,Mpango
+Please wait,Tafadhali subiri
+Policy Number,Namba ya Sera
+Postal Code,Msimbo wa Posta
+Practice Settings,Mipangilio ya Kituo
+Preferences,Mapendeleo
+Prescription,Agizo la Dawa
+Prescriptions,Maagizo ya Dawa
+Previous,Iliyopita
+Price,Bei
+Print,Chapisha
+Problem,Tatizo
+Problems,Matatizo
+Procedure,Kipimo
+Procedures,Vipimo
+Provider,Mtoa Huduma
+Providers,Watoa Huduma
+Pulse,Mpwito wa Moyo
+Quantity,Idadi
+Race,Kabila
+Reason,Sababu
+Receipt,Risiti
+Records,Kumbukumbu
+Referral,Rufaa
+Referrals,Rufaa
+Refills,Mara za Kujaza Tena
+Relationship,Uhusiano
+Religion,Dini
+Report,Ripoti
+Reports,Ripoti
+Required,Inahitajika
+Reset,Weka upya
+Respiration,Upumuaji
+Result,Matokeo
+Results,Matokeo
+Review of Systems,Mapitio ya Mifumo ya Mwili
+Route,Njia ya Kutumia
+Rx,Dawa
+Save,Hifadhi
+Save Changes,Hifadhi Mabadiliko
+Schedule,Ratiba
+Search,Tafuta
+Search/Add,Tafuta/Ongeza
+Select,Chagua
+Self,Mwenyewe
+Settings,Mipangilio
+Sex,Jinsia
+Show,Onyesha
+Specimen,Sampuli
+Spouse,Mwenzi wa Ndoa
+State,Mkoa
+Status,Hali
+Submit,Wasilisha
+Subscriber,Mwanachama wa Bima
+Superbill,Bili Kuu
+Superbill/Fee Sheet,Bili Kuu/Karatasi ya Ada
+Temperature,Joto la Mwili
+Test,Kipimo
+Time,Saa
+Title,Cheo
+To,Hadi
+Today,Leo
+Total,Jumla
+Treatment,Matibabu
+Type,Aina
+Unknown,Haijulikani
+Update,Sasisha
+Username,Jina la mtumiaji
+Users,Watumiaji
+View,Tazama
+Visit,Hudhurio
+Visit Forms,Fomu za Hudhurio
+Visit History,Historia ya Mahudhurio
+Visits,Mahudhurio
+Vitals,Vipimo vya Mwili
+Weight,Uzito
+Yes,Ndiyo

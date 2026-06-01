@@ -1,0 +1,31 @@
+{% for result in results %}
+    {% set vitalInterp = '' %}
+    {% if input is defined and input %}
+        {% set vitalDetail = result.get_details_for_column(input) %}
+        {% if vitalDetail %}{% set vitalInterp = vitalDetail.get_interpretation_option_id() %}{% endif %}
+    {% endif %}
+    {% set vitalCls = '' %}
+    {% if vitalInterp == 'N' %}{% set vitalCls = 'vital-normal' %}{% elseif vitalInterp is not empty %}{% set vitalCls = 'vital-abnormal' %}{% endif %}
+    <td class='historicalvalues {{ vitalCls }} {% if is_edit %}d-none d-md-table-cell{% endif %}'>
+        {% if useMetric %}
+            {# we use the original value since everything is converted from metric and we want to check for the value #}
+            {% if attribute(result, vitalsValue) != 0 %}
+                {% if precision is defined %}
+                    {{ attribute(result, vitalsValueMetric)|number_format(precision)|text }}
+                {% else %}
+                    {{ attribute(result, vitalsValueMetric)|text }}
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% if attribute(result, vitalsValue) != 0 %}
+                {% if precision is defined %}
+                    {{ attribute(result, vitalsValue)|number_format(precision)|text }}
+                {% elseif translate|default(false) %}
+                    {{ attribute(result, vitalsValue, [true])|text }}
+                {% else %}
+                    {{ attribute(result, vitalsValue)|text }}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    </td>
+{% endfor %}

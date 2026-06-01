@@ -1,0 +1,60 @@
+[
+  {
+    "label": "Reception",
+    "menu_id": "opdrcpimg",
+    "children": [
+      {
+        "label": "Start OPD Visit",
+        "menu_id": "opdrcp0",
+        "target": "opdrcp",
+        "url": "/interface/modules/custom_modules/oe-module-opd/public/reception_register.php",
+        "children": [],
+        "requirement": 0
+      },
+      {
+        "label": "Register New Patient",
+        "menu_id": "new0",
+        "target": "pat",
+        "url": "/interface/new/new.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "demo", "write", "addonly"]
+      },
+      {
+        "label": "Find Patient",
+        "icon": "fa-search",
+        "menu_id": "fin0",
+        "target": "fin",
+        "url": "/interface/main/finder/dynamic_finder.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "demo"]
+      }
+    ],
+    "requirement": 0
+  },
+  {
+    "label": "File",
+    "menu_id": "filimg",
+    "children": [
+      {
+        "label": "Preferences",
+        "icon": "fa-gears",
+        "menu_id": "prf0",
+        "target": "msc",
+        "url": "/interface/super/edit_globals.php?mode=user",
+        "children": [],
+        "requirement": 0
+      },
+      {
+        "label": "About",
+        "menu_id": "abo0",
+        "target": "msc",
+        "url": "/interface/main/about_page.php",
+        "children": [],
+        "requirement": 0
+      }
+    ],
+    "requirement": 0
+  }
+]

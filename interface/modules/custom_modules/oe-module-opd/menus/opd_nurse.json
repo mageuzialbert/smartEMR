@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Triage",
+    "menu_id": "opdtriimg",
+    "children": [
+      {
+        "label": "Triage Queue",
+        "menu_id": "opdtri0",
+        "target": "opdtri",
+        "url": "/interface/modules/custom_modules/oe-module-opd/public/triage_queue.php",
+        "children": [],
+        "requirement": 0
+      },
+      {
+        "label": "Flow Board",
+        "menu_id": "pfb0",
+        "target": "flb",
+        "url": "/interface/patient_tracker/patient_tracker.php?skip_timeout_reset=1",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "appt"]
+      },
+      {
+        "label": "Find Patient",
+        "icon": "fa-search",
+        "menu_id": "fin0",
+        "target": "fin",
+        "url": "/interface/main/finder/dynamic_finder.php",
+        "children": [],
+        "requirement": 0,
+        "acl_req": ["patients", "demo"]
+      }
+    ],
+    "requirement": 0
+  },
+  {
+    "label": "File",
+    "menu_id": "filimg",
+    "children": [
+      {
+        "label": "Preferences",
+        "icon": "fa-gears",
+        "menu_id": "prf0",
+        "target": "msc",
+        "url": "/interface/super/edit_globals.php?mode=user",
+        "children": [],
+        "requirement": 0
+      }
+    ],
+    "requirement": 0
+  }
+]
